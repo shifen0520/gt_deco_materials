@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/square_red_granite_bricks",
+    "particle": "gt_deco_materials:block/square_red_granite_bricks"
+  }
+}

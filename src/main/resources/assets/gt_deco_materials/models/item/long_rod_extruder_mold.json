@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gt_deco_materials:item/long_rod_extruder_mold"
+  }
+}

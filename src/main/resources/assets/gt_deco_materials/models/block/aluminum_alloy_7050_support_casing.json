@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/aluminum_alloy_7050_support_casing",
+    "particle": "gt_deco_materials:block/casing/aluminum_alloy_7050_support_casing"
+  }
+}

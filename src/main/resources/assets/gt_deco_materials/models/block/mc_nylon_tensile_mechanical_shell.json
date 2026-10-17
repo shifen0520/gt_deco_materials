@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/mc_nylon_tensile_mechanical_shell",
+    "particle": "gt_deco_materials:block/casing/mc_nylon_tensile_mechanical_shell"
+  }
+}

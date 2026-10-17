@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/metal_compound_particle_front_fluid"
+    }
+  }
+}

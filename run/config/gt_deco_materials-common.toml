@@ -1,0 +1,30 @@
+#Whether to log the dirt block on common setup
+logDirtBlock = true
+#A magic number
+# Default: 42
+# Range: > 0
+magicNumber = 42
+#What you want the introduction message to be for the magic number
+magicNumberIntroduction = "The magic number is... "
+#A list of items to log on common setup.
+items = ["minecraft:iron_ingot"]
+
+[research]
+	#科研系统：算力聚合与 FTB 进度写入周期（tick）。调大可减轻服务端压力。
+	# Default: 20
+	# Range: 1 ~ 1200
+	periodTicks = 20
+	#科研系统：1 tfps 运行 1 秒折算的研究点数。
+	# Default: 1.0
+	# Range: 0.0 ~ 1000000.0
+	pointsPerTfpsSecond = 1.0
+	#科研系统：贡献心跳存活 tick 数。机器停机或区块卸载超时后停止计入算力。
+	# Default: 60
+	# Range: 1 ~ 72000
+	contributionTtl = 60
+	#科研系统：限时增益发放扫描周期（tick）。
+	# Default: 80
+	# Range: 1 ~ 72000
+	boostScanPeriod = 80
+	#科研系统：输出调试日志。
+	debugLog = false

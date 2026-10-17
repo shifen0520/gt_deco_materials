@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/coolant_pip_casing",
+    "particle": "gt_deco_materials:block/casing/coolant_pip_casing"
+  }
+}

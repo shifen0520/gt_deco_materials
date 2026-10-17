@@ -1,0 +1,20 @@
+{
+  "values": [
+    "gt_deco_materials:taranium_spring_small",
+    "gt_deco_materials:niobium_titanium_spring_small",
+    "gt_deco_materials:cosmic_neutronium_spring_small",
+    "gt_deco_materials:copper_spring_small",
+    "gt_deco_materials:crystal_matrix_spring_small",
+    "gt_deco_materials:aluminium_spring_small",
+    "gt_deco_materials:steel_spring_small",
+    "gt_deco_materials:gold_spring_small",
+    "gt_deco_materials:tin_spring_small",
+    "gt_deco_materials:lead_spring_small",
+    "gt_deco_materials:mithril_spring_small",
+    "gt_deco_materials:tungsten_spring_small",
+    "gt_deco_materials:iron_spring_small",
+    "gt_deco_materials:vanadium_gallium_spring_small",
+    "gt_deco_materials:yttrium_barium_cuprate_spring_small",
+    "gt_deco_materials:platinum_spring_small"
+  ]
+}

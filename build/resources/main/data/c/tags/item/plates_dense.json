@@ -1,0 +1,16 @@
+{
+  "values": [
+    "gt_deco_materials:tungsten_steel_plate_dense",
+    "gt_deco_materials:naquadriatictaranium_plate_dense",
+    "gt_deco_materials:obsidian_plate_dense",
+    "gt_deco_materials:calorite_plate_dense",
+    "gt_deco_materials:darmstadtium_plate_dense",
+    "gt_deco_materials:ostrum_plate_dense",
+    "gt_deco_materials:naquadah_alloy_plate_dense",
+    "gt_deco_materials:steel_plate_dense",
+    "gt_deco_materials:rhodium_plated_palladium_plate_dense",
+    "gt_deco_materials:magnetic_steel_plate_dense",
+    "gt_deco_materials:desh_plate_dense",
+    "gt_deco_materials:reactor_steel_plate_dense"
+  ]
+}

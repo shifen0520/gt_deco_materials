@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/heavy_quark_degenerate_matter_fluid"
+    }
+  }
+}

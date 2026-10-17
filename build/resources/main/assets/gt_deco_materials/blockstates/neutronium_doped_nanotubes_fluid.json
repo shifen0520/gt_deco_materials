@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/neutronium_doped_nanotubes_fluid"
+    }
+  }
+}

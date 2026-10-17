@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gt_deco_materials:item/circuit/cosmic_computer",
+    "layer1": "gt_deco_materials:item/circuit/cosmic_computer_uxv"
+  }
+}

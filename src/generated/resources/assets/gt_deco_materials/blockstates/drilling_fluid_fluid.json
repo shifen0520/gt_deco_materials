@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/drilling_fluid_fluid"
+    }
+  }
+}

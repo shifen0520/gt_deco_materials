@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/spatial_storage_hazard_sign_block"
+    }
+  }
+}

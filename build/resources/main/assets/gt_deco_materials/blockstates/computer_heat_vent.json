@@ -1,0 +1,67 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraft:block/air"
+    }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "north": {
+      "default": {
+        "particle": "gt_deco_materials:block/casing/computer_heat_vent_side_3",
+        "center": "gt_deco_materials:block/casing/computer_heat_vent_side_3",
+        "vertical": "gt_deco_materials:block/casing/computer_heat_vent_side_1",
+        "horizontal": "gt_deco_materials:block/casing/computer_heat_vent_side_2",
+        "empty": "gt_deco_materials:block/casing/computer_heat_vent_side_0"
+      }
+    },
+    "south": {
+      "default": {
+        "particle": "gt_deco_materials:block/casing/computer_heat_vent_side_3",
+        "center": "gt_deco_materials:block/casing/computer_heat_vent_side_3",
+        "vertical": "gt_deco_materials:block/casing/computer_heat_vent_side_1",
+        "horizontal": "gt_deco_materials:block/casing/computer_heat_vent_side_2",
+        "empty": "gt_deco_materials:block/casing/computer_heat_vent_side_0"
+      }
+    },
+    "east": {
+      "default": {
+        "particle": "gt_deco_materials:block/casing/computer_heat_vent_side_3",
+        "center": "gt_deco_materials:block/casing/computer_heat_vent_side_3",
+        "vertical": "gt_deco_materials:block/casing/computer_heat_vent_side_1",
+        "horizontal": "gt_deco_materials:block/casing/computer_heat_vent_side_2",
+        "empty": "gt_deco_materials:block/casing/computer_heat_vent_side_0"
+      }
+    },
+    "west": {
+      "default": {
+        "particle": "gt_deco_materials:block/casing/computer_heat_vent_side_3",
+        "center": "gt_deco_materials:block/casing/computer_heat_vent_side_3",
+        "vertical": "gt_deco_materials:block/casing/computer_heat_vent_side_1",
+        "horizontal": "gt_deco_materials:block/casing/computer_heat_vent_side_2",
+        "empty": "gt_deco_materials:block/casing/computer_heat_vent_side_0"
+      }
+    },
+    "up": {
+      "default": {
+        "particle": "gt_deco_materials:block/casing/computer_heat_vent_top_bot_3",
+        "center": "gt_deco_materials:block/casing/computer_heat_vent_top_bot_3",
+        "vertical": "gt_deco_materials:block/casing/computer_heat_vent_top_bot_1",
+        "horizontal": "gt_deco_materials:block/casing/computer_heat_vent_top_bot_2",
+        "empty": "gt_deco_materials:block/casing/computer_heat_vent_top_bot_0"
+      }
+    },
+    "down": {
+      "default": {
+        "particle": "gt_deco_materials:block/casing/computer_heat_vent_top_bot_3",
+        "center": "gt_deco_materials:block/casing/computer_heat_vent_top_bot_3",
+        "vertical": "gt_deco_materials:block/casing/computer_heat_vent_top_bot_1",
+        "horizontal": "gt_deco_materials:block/casing/computer_heat_vent_top_bot_2",
+        "empty": "gt_deco_materials:block/casing/computer_heat_vent_top_bot_0"
+      }
+    }
+  },
+  "connect_to": {
+    "type": "sameBlock"
+  }
+}

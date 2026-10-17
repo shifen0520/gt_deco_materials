@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraft:block/air"
+    }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "gt_deco_materials:block/casing/machine_casing_circuit_assembly_line_3",
+    "empty": "gt_deco_materials:block/casing/machine_casing_circuit_assembly_line_0",
+    "horizontal": "gt_deco_materials:block/casing/machine_casing_circuit_assembly_line_2",
+    "vertical": "gt_deco_materials:block/casing/machine_casing_circuit_assembly_line_1",
+    "particle": "gt_deco_materials:block/casing/machine_casing_circuit_assembly_line"
+  },
+  "connect_to": {
+    "type": "sameBlock"
+  }
+}

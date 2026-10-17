@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/liquid_ammonia_fluid"
+    }
+  }
+}

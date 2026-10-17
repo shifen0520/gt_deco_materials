@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/assembly_line_unit",
+    "particle": "gt_deco_materials:block/assembly_line_unit"
+  }
+}

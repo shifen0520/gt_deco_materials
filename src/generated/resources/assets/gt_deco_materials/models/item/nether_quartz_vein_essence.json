@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gt_deco_materials:item/nether_quartz_vein_essence"
+  }
+}

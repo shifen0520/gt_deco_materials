@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraft:block/air"
+    }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "gt_deco_materials:block/casing/neutronium_stable_casing_3",
+    "empty": "gt_deco_materials:block/casing/neutronium_stable_casing_0",
+    "horizontal": "gt_deco_materials:block/casing/neutronium_stable_casing_2",
+    "vertical": "gt_deco_materials:block/casing/neutronium_stable_casing_1",
+    "particle": "gt_deco_materials:block/casing/neutronium_stable_casing"
+  },
+  "connect_to": {
+    "type": "sameBlock"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/high_strength_space_elevator_cable",
+    "particle": "gt_deco_materials:block/casing/high_strength_space_elevator_cable"
+  }
+}

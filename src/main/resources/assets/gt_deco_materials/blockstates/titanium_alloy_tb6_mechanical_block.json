@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraft:block/air"
+    }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "gt_deco_materials:block/casing/titanium_alloy_tb6_mechanical_block_3",
+    "empty": "gt_deco_materials:block/casing/titanium_alloy_tb6_mechanical_block_0",
+    "horizontal": "gt_deco_materials:block/casing/titanium_alloy_tb6_mechanical_block_2",
+    "vertical": "gt_deco_materials:block/casing/titanium_alloy_tb6_mechanical_block_1",
+    "particle": "gt_deco_materials:block/casing/titanium_alloy_tb6_mechanical_block"
+  },
+  "connect_to": {
+    "type": "sameBlock"
+  }
+}

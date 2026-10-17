@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gt_deco_materials:item/circuit/supracausal_computer",
+    "layer1": "gt_deco_materials:item/circuit/supracausal_computer_opv"
+  }
+}

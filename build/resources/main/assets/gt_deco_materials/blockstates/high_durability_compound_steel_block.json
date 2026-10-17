@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/high_durability_compound_steel_block"
+    }
+  }
+}

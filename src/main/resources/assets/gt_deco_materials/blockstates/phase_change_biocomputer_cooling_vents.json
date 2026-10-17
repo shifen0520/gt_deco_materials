@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/casing/phase_change_biocomputer_cooling_vents"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraft:block/air"
+    }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "gt_deco_materials:block/casing/accelerator_rf_chamber_casing_luv_3",
+    "empty": "gt_deco_materials:block/casing/accelerator_rf_chamber_casing_luv_0",
+    "horizontal": "gt_deco_materials:block/casing/accelerator_rf_chamber_casing_luv_2",
+    "vertical": "gt_deco_materials:block/casing/accelerator_rf_chamber_casing_luv_1",
+    "particle": "gt_deco_materials:block/casing/accelerator_rf_chamber_casing_luv"
+  },
+  "connect_to": {
+    "type": "sameBlock"
+  }
+}

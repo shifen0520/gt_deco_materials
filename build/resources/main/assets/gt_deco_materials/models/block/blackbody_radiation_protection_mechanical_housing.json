@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/blackbody_radiation_protection_mechanical_housing",
+    "particle": "gt_deco_materials:block/casing/blackbody_radiation_protection_mechanical_housing"
+  }
+}

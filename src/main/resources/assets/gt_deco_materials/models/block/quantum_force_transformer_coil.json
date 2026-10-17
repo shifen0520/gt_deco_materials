@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/quantum_force_transformer_coil",
+    "particle": "gt_deco_materials:block/casing/quantum_force_transformer_coil"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/dispersion_strengthened_copper_fluid"
+    }
+  }
+}

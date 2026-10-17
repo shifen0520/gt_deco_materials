@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/magnesium_oxide_ceramic_high_temperature_insulation_mechanical_block",
+    "particle": "gt_deco_materials:block/casing/magnesium_oxide_ceramic_high_temperature_insulation_mechanical_block"
+  }
+}

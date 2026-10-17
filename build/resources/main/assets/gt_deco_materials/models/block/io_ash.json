@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/io_ash",
+    "particle": "gt_deco_materials:block/io_ash"
+  }
+}

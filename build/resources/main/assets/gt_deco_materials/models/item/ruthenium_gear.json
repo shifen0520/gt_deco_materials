@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gt_deco_materials:item/material/gear",
+    "layer1": "gt_deco_materials:item/material/gear_secondary",
+    "layer2": "gt_deco_materials:item/material/gear_overlay"
+  }
+}

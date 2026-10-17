@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/ev_machine_casing",
+    "particle": "gt_deco_materials:block/casing/ev_machine_casing"
+  }
+}

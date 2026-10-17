@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/create_aggregatione_core",
+    "particle": "gt_deco_materials:block/create_aggregatione_core"
+  }
+}

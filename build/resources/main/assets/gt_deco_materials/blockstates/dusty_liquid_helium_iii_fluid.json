@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/dusty_liquid_helium_iii_fluid"
+    }
+  }
+}

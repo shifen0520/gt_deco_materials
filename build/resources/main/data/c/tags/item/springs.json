@@ -1,0 +1,30 @@
+{
+  "values": [
+    "gt_deco_materials:lead_spring",
+    "gt_deco_materials:yttrium_barium_cuprate_spring",
+    "gt_deco_materials:hsla_steel_spring",
+    "gt_deco_materials:molybdenum_disilicide_spring",
+    "gt_deco_materials:taranium_spring",
+    "gt_deco_materials:rtm_alloy_spring",
+    "gt_deco_materials:steel_spring",
+    "gt_deco_materials:iron_spring",
+    "gt_deco_materials:vanadium_gallium_spring",
+    "gt_deco_materials:tungsten_spring",
+    "gt_deco_materials:europium_spring",
+    "gt_deco_materials:naquadah_alloy_spring",
+    "gt_deco_materials:mithril_spring",
+    "gt_deco_materials:tungsten_steel_spring",
+    "gt_deco_materials:niobium_titanium_spring",
+    "gt_deco_materials:cupronickel_spring",
+    "gt_deco_materials:naquadah_spring",
+    "gt_deco_materials:gold_spring",
+    "gt_deco_materials:crystal_matrix_spring",
+    "gt_deco_materials:aluminium_spring",
+    "gt_deco_materials:kanthal_spring",
+    "gt_deco_materials:cosmic_neutronium_spring",
+    "gt_deco_materials:hssg_spring",
+    "gt_deco_materials:nichrome_spring",
+    "gt_deco_materials:tin_spring",
+    "gt_deco_materials:copper_spring"
+  ]
+}

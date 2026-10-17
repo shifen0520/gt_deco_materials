@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/dense_hydrazine_fuel_mixture_fluid"
+    }
+  }
+}

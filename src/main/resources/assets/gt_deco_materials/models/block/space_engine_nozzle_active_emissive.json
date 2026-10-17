@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/space_engine_nozzle_active_emissive",
+    "particle": "gt_deco_materials:block/casing/space_engine_nozzle_active_emissive"
+  }
+}

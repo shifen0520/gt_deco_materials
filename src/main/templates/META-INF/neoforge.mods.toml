@@ -1,0 +1,55 @@
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+
+license="${mod_license}"
+
+[[mods]]
+modId="${mod_id}"
+version="${mod_version}"
+displayName="${mod_name}"
+description='''
+[GT Decorations & Materials] Texture Source & License Statement:
+The texture assets in this Mod (GT Decorations & Materials) — including ingots, dusts, plates, rods, gears, fluids, ores, gems, circuits, etc. — are sourced from the following GregTech community projects.
+This Mod uses Registrylib for the material system registration, and Athena for the dynamic generation and registration of connected textures. We make no claim to the original copyright of the underlying textures. The copyright and licensing of all assets belong to their respective original projects and authors:
+From GTNH (GT New Horizons), GTO (GregTech Odyssey): All licensed under the CC BY-NC-SA 4.0 license.
+From GTM (GregTech Modern): No unified texture license. Specific assets have been traced back to their original sources, such as Gregtech: Refreshed.
+CC BY-NC-SA 4.0 License Full Text: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+【GT装饰与材料】 纹理来源与协议声明：
+本Mod（GT装饰与材料）中的锭、粉、板、杆、齿轮、流体、矿石、宝石、电路等纹理素材，来源于以下 GregTech 社区项目。
+本Mod通过 Registrylib 负责材料系统注册，Athena 进行连接纹理的动态生成与注册，不对底层纹理的原始版权进行主张。各素材的版权及许可协议归原项目及作者所有：
+来自 GTNH (GT New Horizons)，GTO (GregTech Odyssey)：均采用 CC BY-NC-SA 4.0 协议。
+来自 GTM (GregTech Modern)：无统一纹理协议，具体素材已追溯到 Gregtech: Refreshed 等原出处。
+CC BY-NC-SA 4.0 协议全文：https://creativecommons.org/licenses/by-nc-sa/4.0/
+'''
+
+[[dependencies.${mod_id}]]
+    modId="neoforge"
+    type="required"
+    versionRange="[${neo_version},)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+# 前置：registrylib（GTO Registry Lib）—— 材料系统的注册/渲染 API 依赖它
+[[dependencies.${mod_id}]]
+    modId="registrylib"
+    type="required"
+    versionRange="[8.0.16,)"
+    ordering="AFTER"
+    side="BOTH"
+
+# 前置：Athena（terrarium-earth）—— 连接纹理 / 动态贴图引擎
+[[dependencies.${mod_id}]]
+    modId="athena"
+    type="required"
+    versionRange="[4.0.6,)"
+    ordering="AFTER"
+    side="BOTH"
+

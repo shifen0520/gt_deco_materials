@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraft:block/air"
+    }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "gt_deco_materials:block/casing/shielded_accelerator_3",
+    "empty": "gt_deco_materials:block/casing/shielded_accelerator_0",
+    "horizontal": "gt_deco_materials:block/casing/shielded_accelerator_2",
+    "vertical": "gt_deco_materials:block/casing/shielded_accelerator_1",
+    "particle": "gt_deco_materials:block/casing/shielded_accelerator"
+  },
+  "connect_to": {
+    "type": "sameBlock"
+  }
+}

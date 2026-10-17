@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "gt_deco_materials:block/rubber_log",
+    "side": "gt_deco_materials:block/rubber_log"
+  }
+}

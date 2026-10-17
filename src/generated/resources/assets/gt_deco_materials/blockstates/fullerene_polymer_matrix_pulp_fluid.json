@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/fullerene_polymer_matrix_pulp_fluid"
+    }
+  }
+}

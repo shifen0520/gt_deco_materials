@@ -1,0 +1,160 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.78'
+    id 'idea'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+version = mod_version
+group = mod_group_id
+
+sourceSets.main.resources {
+    srcDir('src/generated/resources')
+
+    exclude("**/*.bbmodel")
+    exclude("src/generated/**/.cache")
+}
+
+repositories {
+    maven {
+        name "gtoReleases"
+        url "https://gtodyssey.com/maven/releases"
+    }
+    maven {
+        name = 'HowXu'
+        url = 'https://maven.howxu.cn/'
+    }
+    maven {
+        name "neoforgedReleases"
+        url "https://maven.neoforged.net/releases"
+    }
+    // registrylib 的传递依赖（如 cursemaven 上的组件）通过这里解析
+    maven {
+        name "curseMaven"
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+
+base {
+    archivesName = mod_id
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    version = project.neo_version
+
+    parchment {
+        mappingsVersion = project.parchment_mappings_version
+        minecraftVersion = project.parchment_minecraft_version
+    }
+    runs {
+        client {
+            client()
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+        server {
+            server()
+            programArgument '--nogui'
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+        gameTestServer {
+            type = "gameTestServer"
+            systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        }
+
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+
+        configureEach {
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            logLevel = org.slf4j.event.Level.DEBUG
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet(sourceSets.main)
+        }
+    }
+}
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+dependencies {
+    // 材料系统的注册/渲染 API
+    implementation 'com.gto:registrylib-neoforge-1.21.1:8.0.16'
+    // Athena 4.0.6（1.21.1 NeoForge）—— 连接纹理 / 动态贴图引擎（本地 jar，确定性强）
+    implementation files('libs/athena-neoforge-1.21.1-4.0.6.jar')
+}
+
+var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+    ]
+    inputs.properties replaceProperties
+    expand replaceProperties
+    from "src/main/templates"
+    into "build/generated/sources/modMetadata"
+}
+
+sourceSets.main.resources.srcDir generateModMetadata
+
+neoForge.ideSyncTask generateModMetadata
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/repo"
+        }
+    }
+}
+
+// 注意：zh_cn.json 由 tools/i18n/gen_zh_cn.py 生成，输出到 src/main/resources
+// （runData 只会清空 src/generated 下的 lang 目录，不会动这里，所以中文是稳定存在的）。
+// 手动重新生成：  python tools/i18n/gen_zh_cn.py
+// 刻意不挂 Gradle 任务钩子：processResources 属于 classes，而 runData 又依赖 classes，
+// 挂上去会形成 Circular dependency（processResources → genZhCn → runData/classes → processResources）。
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+// 预生成的资源（tools/ctm 脚本产出的外壳/线圈 blockstate、模型、纹理）与
+// runData 生成的数据可能在 src/generated 里重名。
+// 用 EXCLUDE（先到先得）：sourceSets 里 src/main/resources 排在 src/generated 之前，
+// 所以手写/预生成的资源优先，registrylib 生成的同名文件被忽略。
+// （若用 INCLUDE，后加入的 src/generated 会覆盖 src/main/resources，导致
+//   Athena 连接纹理的模型被 registrylib 的普通版本覆盖 → 物品显示紫黑格。）
+tasks.withType(Copy).configureEach {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}

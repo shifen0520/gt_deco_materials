@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "gt_deco_materials:block/barnarda_c_log",
+    "side": "gt_deco_materials:block/barnarda_c_log"
+  }
+}

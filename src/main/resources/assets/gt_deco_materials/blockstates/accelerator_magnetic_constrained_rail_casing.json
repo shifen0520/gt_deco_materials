@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/casing/accelerator_magnetic_constrained_rail_casing"
+    }
+  }
+}

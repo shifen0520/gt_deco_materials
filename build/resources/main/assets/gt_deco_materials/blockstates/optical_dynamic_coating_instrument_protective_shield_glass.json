@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/casing/optical_dynamic_coating_instrument_protective_shield_glass"
+    }
+  }
+}

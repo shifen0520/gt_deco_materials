@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/strontium_carbonate_ceramic_ray_absorbing_mechanical_cube",
+    "particle": "gt_deco_materials:block/casing/strontium_carbonate_ceramic_ray_absorbing_mechanical_cube"
+  }
+}

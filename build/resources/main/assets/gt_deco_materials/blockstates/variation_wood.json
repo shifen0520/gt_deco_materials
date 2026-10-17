@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "gt_deco_materials:block/variation_wood"
+    },
+    "axis=x": {
+      "model": "gt_deco_materials:block/variation_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "gt_deco_materials:block/variation_wood_horizontal",
+      "x": 90
+    }
+  }
+}

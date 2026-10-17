@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/generic_hazard_sign_block"
+    }
+  }
+}

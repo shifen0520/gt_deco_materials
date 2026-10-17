@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/casing/spacecraft_dynamic_protective_mechanical_casing"
+    }
+  }
+}

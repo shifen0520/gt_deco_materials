@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/mob_spawner_hazard_sign_block"
+    }
+  }
+}

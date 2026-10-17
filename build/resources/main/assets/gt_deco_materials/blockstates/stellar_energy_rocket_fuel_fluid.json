@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/stellar_energy_rocket_fuel_fluid"
+    }
+  }
+}

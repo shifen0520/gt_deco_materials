@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/steam_assembly_block",
+    "particle": "gt_deco_materials:block/steam_assembly_block"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/dark_concrete_windmill_a",
+    "particle": "gt_deco_materials:block/dark_concrete_windmill_a"
+  }
+}

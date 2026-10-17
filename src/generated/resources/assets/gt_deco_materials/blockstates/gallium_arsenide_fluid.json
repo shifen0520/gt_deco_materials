@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/gallium_arsenide_fluid"
+    }
+  }
+}

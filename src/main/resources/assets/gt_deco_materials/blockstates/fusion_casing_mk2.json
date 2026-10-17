@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraft:block/air"
+    }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "gt_deco_materials:block/casing/fusion_casing_mk2_3",
+    "empty": "gt_deco_materials:block/casing/fusion_casing_mk2_0",
+    "horizontal": "gt_deco_materials:block/casing/fusion_casing_mk2_2",
+    "vertical": "gt_deco_materials:block/casing/fusion_casing_mk2_1",
+    "particle": "gt_deco_materials:block/casing/fusion_casing_mk2"
+  },
+  "connect_to": {
+    "type": "sameBlock"
+  }
+}

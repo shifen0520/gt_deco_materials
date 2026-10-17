@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt_deco_materials:block/casing/accelerator_rf_chamber_casing_zpm",
+    "particle": "gt_deco_materials:block/casing/accelerator_rf_chamber_casing_zpm"
+  }
+}

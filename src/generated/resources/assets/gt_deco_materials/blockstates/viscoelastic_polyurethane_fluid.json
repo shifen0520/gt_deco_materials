@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/viscoelastic_polyurethane_fluid"
+    }
+  }
+}

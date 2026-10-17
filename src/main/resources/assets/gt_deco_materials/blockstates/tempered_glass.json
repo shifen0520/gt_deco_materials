@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": {
+      "model": "minecraft:block/air"
+    }
+  },
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "gt_deco_materials:block/casing/tempered_glass_3",
+    "empty": "gt_deco_materials:block/casing/tempered_glass_0",
+    "horizontal": "gt_deco_materials:block/casing/tempered_glass_2",
+    "vertical": "gt_deco_materials:block/casing/tempered_glass_1",
+    "particle": "gt_deco_materials:block/casing/tempered_glass"
+  },
+  "connect_to": {
+    "type": "sameBlock"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/high_energy_quark_gluon_fluid"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt_deco_materials:block/quantum_chromo_dynamically_confined_matter_block"
+    }
+  }
+}
