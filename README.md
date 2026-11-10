@@ -218,3 +218,112 @@ kubejs/data/{minecraft,c}/tags/{block,item}/
 4. 重复注册会报错：event.canRegister() 只判断窗口是否开放；重复执行脚本前建议先判重
 （event.all() 里查一下 id）。
 5. 套件名拼错会静默回退：materialSet('metalic') 不合法 → 按形态自动推断 → 可能不是你要的。
+
+GT Deco & Materials · Java API 材料注册案例
+给附属模组用的写法。KubeJS 的写法见 ../kubejs_examples/。
+示例代码：ExampleMaterials.java（可直接抄进你的附属 mod）。
+1. 接入三步
+① mods.toml 声明依赖并排在本 mod 之后
+[[dependencies.yourmodid]]
+    modId = "gt_deco_materials"
+    mandatory = true
+    versionRange = "[1.0.5,)"
+    ordering = "AFTER"      # 关键：保证 GTDM 初始化完再派发注册事件
+    side = "BOTH"
+② mod 构造器里挂监听
+public YourMod(IEventBus modEventBus) {
+    ExampleMaterials.init();   // 内部：NeoForge.EVENT_BUS.addListener(...)
+}
+③ 事件回调里注册
+private static void onMaterialRegistry(MaterialRegistryEvent event) {
+    if (!event.canRegister()) return;
+
+    MaterialRegistry.register("my_alloy")
+            .color(0xFF5577)
+            .forms(MaterialForms.INGOT, MaterialForms.DUST)
+            .build();
+}
+事件是 NeoForge 事件总线（NeoForge.EVENT_BUS）上的普通事件，
+不是 mod 总线。它在 GTDM 落成物品/方块之前触发，此时注册窗口开放。
+2. Builder API
+方法
+说明
+.color(int rgb)
+主色 0xRRGGBB；自动派生副色（压暗 30%）
+.secondaryColor(int rgb)
+显式副色（tintindex 1 层）
+.materialSet(String)
+材质套件：dull metallic shiny bright magnetic radioactive fine rough sand glass wood diamond emerald netherstar quartz opal lapis lignite flint certus ruby gem_horizontal gem_vertical paper powder
+.name(lang, value)
+任意语言材料名
+.zhcnname(String)
+简体中文材料名（镍 → 「镍锭」）
+.zhtwname(String)
+繁体中文材料名（zh_tw / zh_hk）
+.enname(String)
+英文材料名（一般不用）
+.data(MaterialDataUse<?>)
+附加数据，见下表
+.forms(MaterialForm...)
+形态常量
+.forms(String...)
+按名字指定形态（动态拼装用）
+.build()
+完成注册，返回 Material
+数据（MaterialDataTypes）：
+.data(MaterialDataTypes.PRIMARY_COLOR.rgb(0xFF5577))  // 一般不直接用，用 .color()
+.data(MaterialDataTypes.SECONDARY_COLOR.rgb(0x5C6B78))
+.data(MaterialDataTypes.MELTING_POINT.value(1358))    // 开尔文
+.data(MaterialDataTypes.DENSITY.value(8960))          // kg/m³
+.data(MaterialDataTypes.MASS.mass(56))                // 质量
+3. 形态常量（MaterialForms.*）
+分类
+常量
+锭
+INGOT INGOT_HOT INGOT_DOUBLE RAW_ORE
+粉
+DUST DUST_SMALL DUST_TINY DUST_IMPURE DUST_PURE
+板
+PLATE PLATE_DENSE PLATE_DOUBLE
+齿轮
+GEAR GEAR_SMALL
+杆
+ROD ROD_LONG
+紧固
+BOLT SCREW RING FOIL WIRE_FINE
+弹簧
+SPRING SPRING_SMALL
+粒 / 其他
+NUGGET ROUND TURBINE_BLADE ROTOR NANITES
+矿石加工
+CRUSHED_ORE CRUSHED_REFINED PURIFIED_ORE
+宝石
+GEM GEM_FLAWED GEM_CHIPPED GEM_FLAWLESS GEM_EXQUISITE GEM_LENS
+方块
+BLOCK FRAME RAW_ORE_BLOCK
+矿石母岩
+ORE ORE_DEEPSLATE ORE_NETHERRACK ORE_END_STONE ORE_GRANITE ORE_DIORITE ORE_ANDESITE ORE_TUFF ORE_BLACKSTONE ORE_BASALT ORE_CALCITE ORE_MARBLE ORE_RED_GRANITE ORE_BLACK_GRANITE
+流体
+FLUID GAS LIQUID ELEMENT_GAS ELEMENT_LIQUID ELEMENT_FLUID
+流体四个后缀都是 fluid，一个材料只能挂一个流体形态。
+4. 自动生成（不用自己写）
+内容
+位置
+语言（en_us + 10 种内置 + 任意自定义文件补齐）
+kubejs/assets/gt_deco_materials/lang/
+方块状态 / 方块物品模型 / 桶模型
+kubejs/assets/gt_deco_materials/
+矿石掉落表（粗矿 + 时运 + 精准采集）
+kubejs/data/gt_deco_materials/loot_table/blocks/
+方块/物品标签（mineable/pickaxe、needs_stone_tool、c:ores、c:<通用标签>）
+kubejs/data/
+都是启动时生成，改完要重启游戏（不是 /reload）。
+5. 注意
+1. 注册窗口：只在 MaterialRegistryEvent 派发期间开放；之后 build() 会在
+onServerStarting 封账后抛异常。
+2. 不能删除材料：build() 之后不可撤销，删除会让存档里的物品变空。
+3. 重复 ID 会直接抛异常，报错里带「谁先注册的」。
+4. 附属方的注册顺序：mods.toml 里务必 ordering = "AFTER"，否则可能
+在 GTDM 初始化前收到不到事件。
+5. 材质套件名拼错不会报错：sanitize() 返回 null 后按形态自动推断，
+排查时看 Material#materialSet() 的实际值。
